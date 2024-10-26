@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  app:
+    image: django-app
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - "/opt/myapp_static/static"
+    restart: always
