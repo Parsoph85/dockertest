@@ -23,7 +23,7 @@ jobs:
                 with:
                     flags: '-avc --delete'
                     src: 'dist/'
-                    dest: 'root@"${{secrets.SERVER_IP}}":/path/on/remote'
+                    dest: 'root@"${{secrets.SERVER_IP}}":/'
  
             -   name: Display status from deploy
                 run: echo "${{ steps.deploy.outputs.status }}"
